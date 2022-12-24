@@ -11,11 +11,11 @@ public class Order {
     }
     public Order(String id, String deliveryTime) {
 
-        int len = deliveryTime.length();
-        int hrs = Integer.parseInt(deliveryTime.substring(0 , 2));
-        int min = Integer.parseInt(deliveryTime.substring(len - 2 , len));
-        int time = hrs * 60 + min;
-        this.deliveryTime = time;// The deliveryTime has to converted from string to int and then stored in the attribute
+//        int len = deliveryTime.length();
+//        int hrs = Integer.parseInt(deliveryTime.substring(0 , 2));
+//        int min = Integer.parseInt(deliveryTime.substring(len - 2 , len));
+//        int time = hrs * 60 + min;
+        this.deliveryTime = Integer.parseInt(deliveryTime);// The deliveryTime has to converted from string to int and then stored in the attribute
         //deliveryTime  = HH*60 + MM
     }
 
