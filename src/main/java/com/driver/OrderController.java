@@ -81,10 +81,19 @@ public class OrderController {
     }
     //public ResponseEntity<List<Order>> getOrdersByPartnerId(@PathVariable String partnerId)
 
+//    @GetMapping("/get-all-orders")
+//    public ResponseEntity<List<Order>> getAllOrders(){
+//       // List<String> orders = null;
+//        List<Order> orders = null;
+//        orders = orderService.getAllOrders();
+//        //Get all orders
+//        return new ResponseEntity<>(orders, HttpStatus.CREATED);
+//    }
+
     @GetMapping("/get-all-orders")
-    public ResponseEntity<List<Order>> getAllOrders(){
-       // List<String> orders = null;
-        List<Order> orders = null;
+    public ResponseEntity<List<String>> getAllOrders(){
+        // List<String> orders = null;
+        List<String> orders = null;
         orders = orderService.getAllOrders();
         //Get all orders
         return new ResponseEntity<>(orders, HttpStatus.CREATED);
@@ -110,8 +119,8 @@ public class OrderController {
 
     @GetMapping("/get-last-delivery-time/{partnerId}")
     public ResponseEntity<String> getLastDeliveryTimeByPartnerId(@PathVariable String partnerId){
-       // String time = null;
-            String time = "18:00";
+        String time = null;
+
         //Return the time when that partnerId will deliver his last delivery order.
 
         return new ResponseEntity<>(time, HttpStatus.CREATED);

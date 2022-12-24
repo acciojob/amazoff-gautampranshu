@@ -79,9 +79,14 @@ public class OrderRepository {
     }
 
 
-    public List<Order> getAllOrders(){
-        List<Order> orders = new ArrayList<>();
-        for(Order o : orderMap.values())
+    public List<String> getAllOrders(){
+       // List<Order> orders = new ArrayList<>();
+        List<String> orders = new ArrayList<>();
+//        for(Order o : orderMap.values())
+//        {
+//            orders.add(o);
+//        }
+        for(String o : orderMap.keySet())
         {
             orders.add(o);
         }
