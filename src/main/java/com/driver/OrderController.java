@@ -81,23 +81,23 @@ public class OrderController {
     }
     //public ResponseEntity<List<Order>> getOrdersByPartnerId(@PathVariable String partnerId)
 
-    @GetMapping("/get-all-orders")
-    public ResponseEntity<List<Order>> getAllOrders(){
-        //List<String> orders = null;
-        List<Order> orders = null;
-        orders = orderService.getAllOrders();
-        //Get all orders
-        return new ResponseEntity<>(orders, HttpStatus.CREATED);
-    }
-
 //    @GetMapping("/get-all-orders")
-//    public ResponseEntity<List<String>> getAllOrders(){
-//        // List<String> orders = null;
-//        List<String> orders = null;
+//    public ResponseEntity<List<Order>> getAllOrders(){
+//        //List<String> orders = null;
+//        List<Order> orders = null;
 //        orders = orderService.getAllOrders();
 //        //Get all orders
 //        return new ResponseEntity<>(orders, HttpStatus.CREATED);
 //    }
+
+    @GetMapping("/get-all-orders")
+    public ResponseEntity<List<String>> getAllOrders(){
+        // List<String> orders = null;
+        List<String> orders = null;
+        orders = orderService.getAllOrders();
+        //Get all orders
+        return new ResponseEntity<>(orders, HttpStatus.CREATED);
+    }
 
     @GetMapping("/get-count-of-unassigned-orders")
     public ResponseEntity<Integer> getCountOfUnassignedOrders(){
