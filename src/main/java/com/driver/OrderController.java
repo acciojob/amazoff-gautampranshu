@@ -70,16 +70,16 @@ public class OrderController {
 
     //yeh wala dekh lena kyuki list of order object bola q me leking yaha list of string bol rha hain
     @GetMapping("/get-orders-by-partner-id/{partnerId}")
-//    public ResponseEntity<List<String>> getOrdersByPartnerId(@PathVariable String partnerId){
-    public ResponseEntity<List<Order>> getOrdersByPartnerId(@PathVariable String partnerId)
+   public ResponseEntity<List<String>> getOrdersByPartnerId(@PathVariable String partnerId)
     {
-       // List<String> orders = null;
-        List<Order> orders = null;
+        List<String> orders = null;
+       // List<Order> orders = null;
         orders = orderService.getOrdersByPartnerId(partnerId);
         //orders should contain a list of orders by PartnerId
 
         return new ResponseEntity<>(orders, HttpStatus.CREATED);
     }
+    //public ResponseEntity<List<Order>> getOrdersByPartnerId(@PathVariable String partnerId)
 
     @GetMapping("/get-all-orders")
     public ResponseEntity<List<Order>> getAllOrders(){

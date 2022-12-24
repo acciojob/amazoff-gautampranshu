@@ -66,15 +66,16 @@ public class OrderRepository {
     }
 
 
-    public List<Order> getOrdersByPartnerId(String partnerId){
+    public List<String> getOrdersByPartnerId(String partnerId){
         //orders should contain a list of orders by PartnerId
-        List<Order> ans = new ArrayList<>();
-        List<String> temp = new ArrayList<>();
-        temp = deliveryOrderMapping.get(partnerId); // [1 , 2 ,3]
-        for(int i=0; i<temp.size(); i++) {
-            ans.add(orderMap.get(temp.get(i)));
-        }
-        return ans;
+//        List<Order> ans = new ArrayList<>();
+//        List<String> temp = new ArrayList<>();
+//        temp = deliveryOrderMapping.get(partnerId); // [1 , 2 ,3]
+//        for(int i=0; i<temp.size(); i++) {
+//            ans.add(orderMap.get(temp.get(i)));
+//        }
+//        return ans;
+        return  deliveryOrderMapping.get(partnerId);
     }
 
 

@@ -50,7 +50,7 @@ public class OrderService {
     }
 
 
-    public List<Order> getOrdersByPartnerId(String partnerId){
+    public List<String> getOrdersByPartnerId(String partnerId){
         //orders should contain a list of orders by PartnerId
         return orderRepository.getOrdersByPartnerId(partnerId);
     }
